@@ -16,8 +16,7 @@ public class ContainerCounter : BaseCounter
             if (!player.HasKitchenObject()) // Player has no kitchen object
             {
                 // Instantiate the kitchen object and assign the parent to the player
-                Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
-                kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
+                KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);
 
                 // Event to trigger the animation in the visual logic
                 OnPlayerInteract?.Invoke(this, EventArgs.Empty);
