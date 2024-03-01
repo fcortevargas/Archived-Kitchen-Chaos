@@ -16,10 +16,10 @@ public class ContainerCounterVisual : MonoBehaviour
 
     private void Start()
     {
-        containerCounter.OnInteractAction += ContainerCounter_OnInteractAction;
+        containerCounter.OnPlayerInteract += ContainerCounter_OnPlayerInteract;
     }
 
-    private void ContainerCounter_OnInteractAction(object sender, System.EventArgs e)
+    private void ContainerCounter_OnPlayerInteract(object sender, System.EventArgs e)
     {
         animator.SetTrigger(OPEN_CLOSE);
     }
